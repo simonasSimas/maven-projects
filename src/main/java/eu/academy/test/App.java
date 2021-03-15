@@ -1,11 +1,7 @@
 package eu.academy.test;
 
-import eu.academy.test.service.DnsProvider;
-import eu.academy.test.service.DnsServer;
-import eu.academy.test.service.Mapas;
-
-
-
+import eu.academy.test.service.FindWithMaxAverage;
+import eu.academy.test.service.ListOfNumbers;
 
 /**
  * Hello world!
@@ -13,15 +9,18 @@ import eu.academy.test.service.Mapas;
  */
 public class App {
     public static void main(String[] args) {
-        Mapas<DnsProvider, DnsServer> dnsMapas = new Mapas<>();
-        dnsMapas.ideti(DnsProvider.GOOGLE, new DnsServer("8.8.8.8", "8.8.4.4"));
-        dnsMapas.ideti(DnsProvider.CLOUDFARE, new DnsServer("1.1.1.1", "1.0.0.1"));
-        DnsServer googleDns = dnsMapas.gauti(DnsProvider.GOOGLE);
-        System.out.println(googleDns.toString());
-        Mapas<String, String> zodynasMap = new Mapas<>();
-        zodynasMap.ideti("Labas", "Hello");
-        zodynasMap.ideti("Pasaulis", "World");
-        String reiksme = zodynasMap.gauti("Labas");
-        System.out.println(reiksme);
+        ListOfNumbers listObject1 = new ListOfNumbers();
+        listObject1.addNumber(1.5d);
+        listObject1.addNumber(10d);
+        listObject1.addNumber(2.5d);
+        ListOfNumbers listObject2 = new ListOfNumbers();
+        listObject2.addNumber(0d);
+        listObject2.addNumber(1d);
+        ListOfNumbers listObject3 = new ListOfNumbers();
+        listObject3.addNumber(100d);
+        ListOfNumbers result1 =  new FindWithMaxAverage().findWithMaxAverage(listObject1, listObject2, listObject3);
+        ListOfNumbers result2 = new FindWithMaxAverage().findWithMaxAverage(listObject1, listObject2);
+        System.out.println(result1.toString());
+        System.out.println(result2.toString());
     }
 }
