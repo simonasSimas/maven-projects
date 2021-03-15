@@ -1,9 +1,11 @@
 package eu.academy.test;
 
+import eu.academy.test.service.DnsProvider;
+import eu.academy.test.service.DnsServer;
+import eu.academy.test.service.Mapas;
 
-import eu.academy.test.model.*;
-import eu.academy.test.service.Medis;
-import eu.academy.test.service.Miskas;
+
+
 
 /**
  * Hello world!
@@ -11,18 +13,15 @@ import eu.academy.test.service.Miskas;
  */
 public class App {
     public static void main(String[] args) {
-        Azuolas azuolas = new Azuolas();
-        Berzas berzas = new Berzas();
-        Egle egle = new Egle();
-        Pusis pusis = new Pusis();
-        Kadagys kadagys = new Kadagys();
-
-        Object[] ivairusMiskas = {azuolas, berzas, pusis, kadagys,egle};
-        Miskas<Medis> medis = new Miskas<>();
-        medis.ivairusMiskas(ivairusMiskas);
-        Object[] spygliuociuMiskas = {egle, pusis, kadagys};
-        medis.spygliuociuMiskas(spygliuociuMiskas);
-        Object[] berzuMiskas = {berzas, berzas, berzas};
-        medis.berzuMiskas(berzuMiskas);
+        Mapas<DnsProvider, DnsServer> dnsMapas = new Mapas<>();
+        dnsMapas.ideti(DnsProvider.GOOGLE, new DnsServer("8.8.8.8", "8.8.4.4"));
+        dnsMapas.ideti(DnsProvider.CLOUDFARE, new DnsServer("1.1.1.1", "1.0.0.1"));
+        DnsServer googleDns = dnsMapas.gauti(DnsProvider.GOOGLE);
+        System.out.println(googleDns.toString());
+        Mapas<String, String> zodynasMap = new Mapas<>();
+        zodynasMap.ideti("Labas", "Hello");
+        zodynasMap.ideti("Pasaulis", "World");
+        String reiksme = zodynasMap.gauti("Labas");
+        System.out.println(reiksme);
     }
 }
