@@ -1,6 +1,6 @@
 package eu.academy.test.service;
 
-public class SuperPair <T1,T2, N>{
+public class SuperPair <T1,T2, N extends Number>{
     private T1 a;
     private T2 b;
     private N n;
