@@ -1,4 +1,4 @@
-package eu.academy.test.papildoma;
+package eu.academy.test.papildoma1;
 
 public class Person {
     private int id;
