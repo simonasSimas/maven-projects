@@ -1,5 +1,6 @@
 package eu.academy.test.lambdaofstreams.basicFirst.streams.service;
 
+import eu.academy.test.lambdaofstreams.basicFirst.streams.bonusExc.BonusExcRun;
 import eu.academy.test.lambdaofstreams.basicFirst.streams.streamsFactory.StreamsFactory;
 import eu.academy.test.papildoma1.Person;
 import eu.academy.test.service.PersonList;
@@ -23,6 +24,7 @@ public class StreamsRun {
         System.out.println();
         System.out.println("------------------------------");
         System.out.println();
-
+        System.out.println(BonusExcRun.getDistinctPersonList(listOfPeople).toString());
+        System.out.println(BonusExcRun.mapOfPersonList(listOfPeople).toString());
     }
 }

@@ -1,8 +1,6 @@
 package eu.academy.test.lambdaofstreams.basicFirst.streams.streamsFactory;
 
-import eu.academy.test.papildoma1.FileReader;
 import eu.academy.test.papildoma1.Person;
-import eu.academy.test.service.PersonList;
 
 import java.util.ArrayList;
 import java.util.List;

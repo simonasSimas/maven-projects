@@ -1,7 +1,7 @@
 package eu.academy.test.papildoma3;
 
-import eu.academy.test.service.PersonList;
 import eu.academy.test.papildoma1.Person;
+import eu.academy.test.service.PersonList;
 
 import java.util.Optional;
 
