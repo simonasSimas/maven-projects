@@ -1,6 +1,4 @@
-package eu.academy.test;
-
-import eu.academy.test.Starter;
+package eu.academy.test.service;
 
 public class Startup implements Starter {
     @Override

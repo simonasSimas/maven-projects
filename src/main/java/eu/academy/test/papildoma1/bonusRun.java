@@ -4,12 +4,12 @@ import java.util.function.Consumer;
 
 public class bonusRun {
     public static void main(String[] args) {
-        Consumer<FIleReader> consumer = fIleReader -> {
-            for (Person p : fIleReader.copyList()){
+        Consumer<FileReader> consumer = fileReader -> {
+            for (Person p : fileReader.copyList()){
                 System.out.println("Id: " + p.getId() + ", Name: " + p.getName() + ", Last name: " + p.getLastName());
             }
         };
-        FIleReader fIleReader = new FIleReader();
+        FileReader fIleReader = new FileReader();
         consumer.accept(fIleReader);
     }
 }

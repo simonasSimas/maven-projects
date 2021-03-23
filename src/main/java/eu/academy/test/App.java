@@ -1,6 +1,9 @@
 package eu.academy.test;
 
 
+import eu.academy.test.service.Starter;
+import eu.academy.test.service.Startup;
+
 /**
  * Hello world!
  */

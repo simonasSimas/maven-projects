@@ -1,4 +1,4 @@
-package eu.academy.test.lambdaofstreams;
+package eu.academy.test.lambdaofstreams.basicFirst.streams.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,6 @@ public class RunLambda {
     public static void run() {
         List<String> list1 = new ArrayList<>();
         List<String> list2 = new ArrayList<>();
-//        List<String> sortedList = new ArrayList<>();
         list1.add("a");
         list1.add("b");
         list1.add("c");

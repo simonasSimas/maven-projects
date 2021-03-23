@@ -1,4 +1,4 @@
-package eu.academy.test;
+package eu.academy.test.service;
 
 @FunctionalInterface
 public interface Starter {
