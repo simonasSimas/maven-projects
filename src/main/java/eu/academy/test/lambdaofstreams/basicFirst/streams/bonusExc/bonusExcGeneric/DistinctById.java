@@ -1,4 +1,4 @@
-package eu.academy.test.lambdaofstreams.basicFirst.streams.bonusExc;
+package eu.academy.test.lambdaofstreams.basicFirst.streams.bonusExc.bonusExcGeneric;
 
 import java.util.HashSet;
 import java.util.Set;

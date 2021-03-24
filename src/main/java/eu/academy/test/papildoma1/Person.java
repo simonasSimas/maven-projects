@@ -31,4 +31,9 @@ public class Person {
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
+
+    public Person(String name, String lastName) {
+        this.name = name;
+        this.lastName = lastName;
+    }
 }
