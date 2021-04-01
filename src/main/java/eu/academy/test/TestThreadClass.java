@@ -1,6 +1,6 @@
 package eu.academy.test;
 
-public class TestThreadClass extends Thread {
+public class TestThreadClass implements Runnable {
 
     private String threadName;
 
@@ -14,9 +14,9 @@ public class TestThreadClass extends Thread {
         for (int count = 1, row = 1; row<20;
         row++, count++){
             for (int i = 0; i<count; i++){
-                System.out.println("*");
+                System.out.print("*");
             }
-            System.out.println('\n');
+            System.out.print('\n');
         }
         System.out.println("Thread " + threadName + " exiting.");
     }
